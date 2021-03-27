@@ -1,9 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import { usePluginData } from '@docusaurus/useGlobalData';
 import styles from './styles.module.css';
 
@@ -21,11 +19,7 @@ function Podcast() {
             Seasoned, Nerdy Technologists and Developers discuss a wide range of topics in front-end application
             development, taking cues from their own experiences. Think upbeat experience technology conversations.
           </p>
-          <div>
-            <Link className={clsx('button button--outline button--lg')} to={useBaseUrl('docs/')}>
-              Get Started
-            </Link>
-          </div>
+          <div></div>
         </div>
       </header>
       <main>
