@@ -68,7 +68,7 @@ export default function Home() {
           <div className={styles.buttons}>
             <Link
               className={clsx('button button--outline button--secondary button--lg', styles.getStarted)}
-              to={useBaseUrl('docs/')}
+              to={useBaseUrl('learn/')}
             >
               Get Started
             </Link>
