@@ -1,5 +1,6 @@
 const axios = require('axios');
 const qs = require('qs');
+require('dotenv').config(); // because docusaurus2-dotenv plugin doesn't work here
 
 module.exports = function (context, options) {
   return {
@@ -25,7 +26,7 @@ async function getAuthToken() {
     method: 'post',
     url: 'https://accounts.spotify.com/api/token',
     headers: {
-      Authorization: 'Basic OGQ2MTA0YTAyMzRlNGE2OWI3M2I0NGQzZWU2OTNlN2I6MmI2ZDE1YjIzOThkNDVjYjgwZGU4ZWU5YzY0YzU5ZTY=',
+      Authorization: `Basic ${process.env.SPOTIFY_SECRET}`,
       'Content-Type': 'application/x-www-form-urlencoded',
     },
     data: qs.stringify({

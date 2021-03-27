@@ -11,7 +11,15 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'pagesource', // Usually your GitHub org/user name.
   projectName: 'dev-portal', // Usually your repo name.
-  plugins: [path.resolve(__dirname, 'plugins', 'podcast-data')],
+  plugins: [
+    [
+      'docusaurus2-dotenv',
+      {
+        systemvars: true,
+      },
+    ],
+    path.resolve(__dirname, 'plugins', 'podcast-data'),
+  ],
   themeConfig: {
     navbar: {
       title: 'XT Portal',
