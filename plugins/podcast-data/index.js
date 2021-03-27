@@ -35,7 +35,7 @@ async function getAuthToken() {
   };
 
   const response = await axios(request);
-  return response.data?.access_token;
+  return response.data && response.data.access_token;
 }
 
 async function getEpisodes(authToken) {
@@ -50,7 +50,7 @@ async function getEpisodes(authToken) {
   };
 
   const response = await axios(request);
-  const episodes = response.data?.items;
+  const episodes = response.data && response.data.items;
 
   console.log(`[plugin:podcast-data] fetched ${episodes.length} episodes`);
 
